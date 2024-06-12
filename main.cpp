@@ -15,6 +15,15 @@ int main() {
 
   cin >> user_name;
   cout << "\n";
-  cout << "Hello " << user_name
-       << " I want you input some data to play around wiht files." << endl;
+  cout << "Hello " << user_name;
+  cout << " I want you input some data to play around wiht files." << endl;
+
+  // File streame created
+  ofstream input_file; // For some reason I always got confused between ofstream
+                       // and ifstream and what's the input file and what's the
+                       // output file
+  cout << "User please provide name for the file" << endl;
+  cin >> filename;
+  input_file.open(filename);
+  cout << "Now that a file has been created we must fill it with data!" << endl;
 }
