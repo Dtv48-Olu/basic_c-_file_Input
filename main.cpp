@@ -26,4 +26,17 @@ int main() {
   cin >> filename;
   input_file.open(filename);
   cout << "Now that a file has been created we must fill it with data!" << endl;
+  cout
+      << "Enter data for a int variable, followed by data for a double variable"
+      << endl;
+  cin >> data_one;
+  cin >> data_two;
+  for (int i = 0; i < 20; i++) {
+    data_one = data_one - (i * data_two);
+    data_two = (data_one + data_two) * i;
+    input_file << "Datapoint One: " << data_one
+               << " Datapoint Two: " << data_two << endl;
+  }
+  cout << "The loop has concluded" << endl;
+  return 0;
 }
