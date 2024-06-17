@@ -1,6 +1,12 @@
 // The following project is pratice for file input and output in c++
 #include <fstream>
 #include <iostream>
+#include <iterator>
+#include <ostream>
+
+void print_a_string(std::string a_string) {
+  std::cout << "This is a string" << a_string << std::endl;
+}
 
 int main() {
   using namespace std;
@@ -38,5 +44,6 @@ int main() {
                << " Datapoint Two: " << data_two << endl;
   }
   cout << "The loop has concluded" << endl;
+  print_a_string(filename);
   return 0;
 }
